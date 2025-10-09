@@ -1,0 +1,15 @@
+.Nameproduct1 {
+    font-weight: bold;
+}
+.Priceproduct1:before {
+    content:"-";
+}
+.ProductCss3{
+    float: left;
+}
+.DetailProduct2{
+    float: left;
+}
+.Productdetail{
+    text-align: center;
+}
