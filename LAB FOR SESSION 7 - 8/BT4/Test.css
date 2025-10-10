@@ -1,0 +1,16 @@
+.dropdown{
+    list-style: none;
+}
+.dropdown-content a{
+    text-decoration: none;
+    display: block;
+
+}
+.dropdown .dropdown-content{
+    display:none;
+    
+    position:absolute;
+}
+.dropdown:hover .dropdown-content{
+    display:block;
+}

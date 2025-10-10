@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(35, 72, 110);
+}
+
+#header {
+  height: 181px;
+  width: 900px;
+  margin-left: 20%;
+  margin-right: 25%;
+}
+#Menu {
+  margin-top: 55px;
+  margin-left: 30px;
+  background: #ffff;
+  height: 40px;
+  opacity: 0.6;
+  border-radius: 10px 0px 0px 10px;
+}
+#Menu a {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+.level1{
+    list-style-type: none;
+}
+.level1 li{
+    display:inline;
+    float:left;
+    padding: 0px 20px 0px 0px;
+    height: 27px;
+    font-weight: bold;
+}
+.level1 li a,
+.level1 li a:visited{
+    color: red;
+    text-decoration: none;
+}
+.level1 li a:hover{
+    color:green;
+}
+.level2{
+    position:absolute;
+    display:none;
+    margin-top: 5px;
+    padding:0px;
+}
+.level2 li{
+    float:none;
+    padding: 10px;
+    position: relative;
+    background-color: #ccc;
+    display:block;
+    height:auto;
+}
+.level1:hover .level2{
+    display:block;
+}
+.level2 li:hover{
+    background-color: yellow;
+}
