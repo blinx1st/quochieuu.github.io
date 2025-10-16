@@ -1,0 +1,185 @@
+header {
+  background: url(images/header.jpg);
+}
+body {
+  background-color: rgb(14, 107, 107);
+}
+#logo {
+  padding: 20px;
+}
+#Menu {
+  background-color: white;
+  height: 40px;
+  border-radius: 20px;
+  opacity: 80%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.level1 li {
+  list-style-type: none;
+  display: inline;
+  float: left;
+  margin-top: 10px;
+}
+.level1 li a {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  margin: 20px;
+}
+.level2 {
+  position: absolute;
+  background-color: white;
+  padding: 0px 10px;
+  margin-left: 26px;
+  display: none;
+}
+.level2 li {
+  display: block;
+  list-style: none;
+  float: none;
+  padding: 10px 5px;
+  color: rgb(148, 84, 0);
+}
+.level1 li:hover {
+  background-color: aquamarine;
+}
+.FlowerCategory:hover .level2 {
+  display: block;
+}
+.FlowerCategory {
+  background-color: antiquewhite;
+}
+#welcome {
+  border: dotted 5px solid greenyellow;
+  vertical-align: center;
+  padding: 8px;
+  font-weight: bold;
+  background-color: white;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "item1 item1 item3 item4"
+        "item5 item6 item7 item8"
+        "item5 item6 item11 item8"
+        "item13 item14 item15 item8"
+        "item13 item14 item19 item8"
+        "item21 item22 item23 item8"
+        "item21 item22 item27 item8";
+    background-color: white;
+}
+
+.Newproduct1{
+    text-align: center;
+    grid-area: item1;
+}
+.Newproduct1 p{
+    color: red;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+  }
+.Newproduct2{
+    text-align: center;
+    grid-area: item3;
+}
+.Newproduct2 p{
+    color: red;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+.Flowercatalog{
+    text-align: center;
+    grid-area: item4;
+}
+.Flowercatalog p{
+    color: red;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+.flower1{
+    grid-area: item5;
+    vertical-align: center;
+    border-bottom: 2px dotted rgb(141, 141, 141);
+}
+.flower2{
+    grid-area: item13;
+    vertical-align: center;
+    border-bottom: 2px dotted rgb(141, 141, 141);
+}
+.flower3{
+    grid-area: item21;
+    vertical-align: center;
+    border-bottom: 2px dotted rgb(141, 141, 141);
+}
+.tulip1{
+    grid-area: item11;
+    vertical-align: center;
+}
+.tulip2{
+    grid-area: item19;
+    vertical-align: center;
+}
+.tulip3{
+    grid-area: item27;
+    vertical-align: center;
+}
+.title-catalog{
+    grid-area: item8;
+    vertical-align: center;
+    font-weight: bold;
+}
+.title-catalog ul{
+  list-style-image: url(images/left_menu_bullet.gif);
+}
+/*flower1*/
+.yellow-rose,.yellow-rose2,.purple-rose {
+    color: red;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 5px;
+}
+.copy1,.copy2,.copy3{
+  list-style-type: none;
+}
+.text-flower1{
+  grid-area:item6;
+  border: 2px solid rgb(189, 189, 189);
+}
+.text-flower2{
+  grid-area:item14;
+  border: 2px solid rgb(189, 189, 189);
+}
+.text-flower3{
+  grid-area:item22;
+  border: 2px solid rgb(189, 189, 189);
+}
+.text-tulip{
+  grid-area:item7;
+  text-align: center;
+}
+.text-purple{
+  grid-area:item15;
+  text-align: center;
+}
+.text-yellow{
+  grid-area:item23;
+  text-align: center;
+}
+.flower1img,.flower2img,.flower3img{
+    display: block;
+  margin: auto;
+}
+.tulip1img,.tulip2img,.tulip3img{
+    display: block;
+  margin: auto;
+  padding: 50px 100px;
+  border: 2px solid rgb(189, 189, 189);
+}
