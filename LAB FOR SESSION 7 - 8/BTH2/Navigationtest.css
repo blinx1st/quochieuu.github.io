@@ -22,6 +22,7 @@ body {
   margin-top: 10px;
 }
 .level1 li a {
+  display: inline;
   color: red;
   font-weight: bold;
   text-decoration: none;
@@ -29,18 +30,21 @@ body {
   margin: 20px;
 }
 .level2 {
-  position: absolute;
+  position: relative;
   background-color: white;
   padding: 0px 10px;
   margin-left: 26px;
   display: none;
 }
 .level2 li {
-  display: block;
-  list-style: none;
-  float: none;
-  padding: 10px 5px;
+  display: flex;
+  align-self: center;
+  float:none;
+  width: 100px;
+  padding: 10px;
   color: rgb(148, 84, 0);
+  transition: .3s ease-in;
+  z-index: 1;
 }
 .level1 li:hover {
   background-color: aquamarine;
@@ -49,7 +53,7 @@ body {
   display: block;
 }
 .FlowerCategory {
-  background-color: antiquewhite;
+  height: 25px;
 }
 #welcome {
   border: dotted 5px solid greenyellow;
@@ -72,7 +76,6 @@ body {
         "item21 item22 item27 item8";
     background-color: white;
 }
-
 .Newproduct1{
     text-align: center;
     grid-area: item1;
@@ -108,6 +111,7 @@ body {
     vertical-align: center;
     border-bottom: 2px dotted rgb(141, 141, 141);
 }
+
 .flower2{
     grid-area: item13;
     vertical-align: center;
