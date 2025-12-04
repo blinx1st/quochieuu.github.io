@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form Alert</title>
+    <style>
+      body {
+        background: black;
+        color: white;
+        font-family: sans-serif;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 50px auto;
+        gap: 10px;
+      }
+      input, select, textarea, button {
+        padding: 8px;
+        border-radius: 4px;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <p class="p">CONTACT US</p>
+
+      <input type="text" id="fname" name="fname" placeholder="Name" required />
+      <input type="email" id="email" name="email" placeholder="Email*" required />
+
+      <select id="reason" name="reason" required>
+        <option value="">Contact reason</option>
+        <option value="error">Error</option>
+        <option value="trouble">I have trouble with...?</option>
+      </select>
+
+      <input
+        type="tel"
+        id="telephone"
+        name="telephone"
+        placeholder="Phone Number*"
+        required
+      />
+
+      <textarea
+        id="details"
+        name="details"
+        placeholder="Tell us the details"
+        rows="5"
+        cols="32"
+      ></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // ❗ Ngăn trang load lại
+
+        // Lấy toàn bộ dữ liệu form
+        const formData = new FormData(form);
+
+        // Tạo chuỗi hiển thị gọn
+        let result = "";
+        for (const [key, value] of formData.entries()) {
+          result += `${key}: ${value}\n`;
+        }
+
+        // Hiển thị alert
+        alert("Dữ liệu bạn đã nhập:\n\n" + result);
+      });
+    </script>
+  </body>
+</html>

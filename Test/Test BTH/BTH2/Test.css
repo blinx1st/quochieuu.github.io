@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: rgb(3, 60, 41);
+}
+
+header {
+  background: url(images/header.jpg);
+}
+.navbar {
+  background-color: rgb(255, 255, 255);
+  opacity: 80%;
+  border-radius: 20px;
+  margin: 0px 20px;
+  height: 300px;
+}
+.level1 {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-top: 10px;
+  position: relative;
+}
+.level1 li {
+  display: inline-block;
+  padding: 0;
+  margin: 20px 30px 20px 30px;
+  text-align: center;
+}
+.level1 li a {
+  font-size: 18px;
+  padding: 20px 0px 20.5px 0px;
+}
+.level1 li a {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+.level1 li a:hover {
+  background-color: aquamarine;
+}
+.level2 {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0px;
+  width: 130px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in, visibility 0.4s ease;
+}
+.level2 li {
+  font-weight: bold;
+  width: 100px;
+  margin: 15px;
+  color: dark;
+}
+.level2 li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.FlowerCategory:hover .level2 {
+  background-color: aquamarine;
+  opacity: 1;
+  visibility: visible;
+}
+.FlowerCategory:not(:hover) .level2 {
+  opacity: 0;
+  visibility: hidden;
+}

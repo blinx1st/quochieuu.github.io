@@ -12,7 +12,7 @@ body {
   text-align: left;
   padding: 0;
   margin: 0;
-  overflow: hidden
+  overflow: hidden;
 }
 .topmenu li {
   font-size: 24px;
@@ -25,37 +25,36 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
-.topmenu a:hover
-{
+.topmenu a:hover {
   background-color: #888;
 }
-.topmenu li{
-    float:left
+.topmenu li {
+  float: left;
 }
 .box {
   overflow: hidden;
   border: 0.25px solid #000;
 }
-.dropdown button{
-    background-color: #000000;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+.dropdown button {
+  background-color: #000000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
-.dropdown a{
-    display: block;
-    color: black;
-    text-decoration:none;
+.dropdown a {
+  display: block;
+  color: black;
+  text-decoration: none;
 }
-.dropdown .dropdown-content{
-    display:none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 104px;
-    box-shadow: 0px 8px 12px 
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 104px;
+  box-shadow: 0px 8px 12px;
 }
-.dropdown:hover .dropdown-content{
-    display: block;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
