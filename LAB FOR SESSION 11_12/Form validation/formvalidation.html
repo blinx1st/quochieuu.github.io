@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Register new account</title>
+    <script src="validation.js"></script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .title-bar {
+        background-color: #0066cc;
+        color: white;
+        font-weight: bold;
+        padding: 4px 0;
+      }
+      input[type="text"],
+      input[type="password"],
+      textarea,
+      select {
+        width: 250px;
+      }
+      textarea {
+        height: 80px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form name="frmRegister" method="get" onsubmit="return formValid();">
+      <table border="0" align="center">
+        <!-- Thanh tiêu đề xanh -->
+        <tr>
+          <td colspan="2" class="title-bar" align="center">
+            REGISTER NEW ACCOUNT
+          </td>
+        </tr>
+
+        <tr>
+          <td align="right">Username</td>
+          <td><input type="text" name="txtUsername" /></td>
+        </tr>
+
+        <tr>
+          <td align="right">Password</td>
+          <td><input type="password" name="txtPassword1" /></td>
+        </tr>
+
+        <tr>
+          <td align="right">Confirm password</td>
+          <td><input type="password" name="txtPassword2" /></td>
+        </tr>
+
+        <tr>
+          <td align="right">Gender</td>
+          <td>
+            <label
+              ><input type="radio" name="gender" value="Male" checked />
+              Male</label
+            >
+            <label
+              ><input type="radio" name="gender" value="Female" /> Female</label
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td align="right">Phone</td>
+          <td><input type="text" name="txtPhone" /></td>
+        </tr>
+
+        <tr>
+          <td align="right">Email</td>
+          <td><input type="text" name="txtEmail" /></td>
+        </tr>
+
+        <tr>
+          <td align="right">Favourite</td>
+          <td>
+            <label><input type="checkbox" name="chkMusic" /> Music</label>
+            <label><input type="checkbox" name="chkReading" /> Reading</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td align="right">Picture</td>
+          <td><input type="file" name="filPicture" /></td>
+        </tr>
+
+        <tr>
+          <td align="right">Description</td>
+          <td><textarea name="txtDescription"></textarea></td>
+        </tr>
+
+        <tr>
+          <td align="right">Education level</td>
+          <td>
+            <select name="cboEdu">
+              <option>Aptech</option>
+              <option>College</option>
+              <option>University</option>
+              <option>Master</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td align="right">Language</td>
+          <td>
+            <select name="lstLanguage" size="4" multiple>
+              <option>Vietnamese</option>
+              <option>English</option>
+              <option>French</option>
+              <option>Japanese</option>
+              <option>Chinese</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" value="Register" />
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
