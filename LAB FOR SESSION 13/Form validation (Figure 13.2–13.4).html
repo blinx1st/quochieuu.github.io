@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form validation</title>
+
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+      }
+      .wrap {
+        width: 520px;
+        margin: 30px auto;
+      }
+      .title {
+        background: #0b6d8e;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        padding: 8px 0;
+        margin-bottom: 12px;
+        letter-spacing: 0.5px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 4px 6px;
+        vertical-align: top;
+      }
+      td.label {
+        width: 160px;
+        text-align: right;
+        font-style: italic;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="file"] {
+        width: 290px;
+      }
+      textarea {
+        width: 290px;
+        height: 120px;
+      }
+      select {
+        width: 295px;
+      }
+      .btns {
+        text-align: center;
+        padding-top: 12px;
+      }
+      .btns input {
+        width: 90px;
+      }
+    </style>
+
+    <script>
+      function formValid() {
+        var f = document.frmRegister;
+
+        var phone_pattern = /^(\(0\d{1,3}\)\d{7})|(0\d{9,10})$/;
+        var email_pattern = /^[a-zA-Z]\w*(\.\w+)*@\w+(\.\w{2,3})+$/;
+
+        if (f.txtUsername.value.trim() === "") {
+          alert("Username can't be empty");
+          f.txtUsername.focus();
+          return false;
+        }
+
+        if (
+          f.txtPassword1.value.length < 6 ||
+          f.txtPassword1.value.length > 20
+        ) {
+          alert("Password length must be from 6 to 20 characters");
+          f.txtPassword1.focus();
+          return false;
+        }
+
+        if (f.txtPassword1.value !== f.txtPassword2.value) {
+          alert("Password doesn't match");
+          f.txtPassword2.focus();
+          return false;
+        }
+
+        if (phone_pattern.test(f.txtPhone.value.trim()) === false) {
+          alert("Invalid phone number");
+          f.txtPhone.focus();
+          return false;
+        }
+
+        if (email_pattern.test(f.txtEmail.value.trim()) === false) {
+          alert("Invalid email address");
+          f.txtEmail.focus();
+          return false;
+        }
+
+        if (f.chkMusic.checked === false && f.chkReading.checked === false) {
+          alert("You must select at least one favourite");
+          f.chkMusic.focus();
+          return false;
+        }
+
+        if (f.filPicture.value === "") {
+          alert("You must select your picture");
+          f.filPicture.focus();
+          return false;
+        }
+
+        if (f.txtDescription.value.trim() === "") {
+          alert("You must enter description");
+          f.txtDescription.focus();
+          return false;
+        }
+
+        alert("All register information are correct.");
+        return true;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="title">REGISTER NEW ACCOUNT</div>
+
+      <!-- Using onsubmit event -->
+      <form name="frmRegister" method="get" onsubmit="return formValid();">
+        <table>
+          <tr>
+            <td class="label">Username</td>
+            <td><input type="text" name="txtUsername" /></td>
+          </tr>
+
+          <tr>
+            <td class="label">Password</td>
+            <td><input type="password" name="txtPassword1" /></td>
+          </tr>
+
+          <tr>
+            <td class="label">Confirm password</td>
+            <td><input type="password" name="txtPassword2" /></td>
+          </tr>
+
+          <tr>
+            <td class="label">Gender</td>
+            <td>
+              <input type="radio" name="radGender" value="Male" checked /> Male
+              &nbsp;&nbsp;
+              <input type="radio" name="radGender" value="Female" /> Female
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">Phone</td>
+            <td>
+              <input type="text" name="txtPhone" placeholder="0xxxxxxxxx" />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">Email</td>
+            <td>
+              <input
+                type="text"
+                name="txtEmail"
+                placeholder="example@email.com"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">Favourite</td>
+            <td>
+              <input type="checkbox" name="chkMusic" /> Music &nbsp;&nbsp;
+              <input type="checkbox" name="chkReading" /> Reading
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">Picture</td>
+            <td><input type="file" name="filPicture" /></td>
+          </tr>
+
+          <tr>
+            <td class="label">Description</td>
+            <td><textarea name="txtDescription"></textarea></td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="btns">
+              <input type="submit" value="Register" />
+              &nbsp;&nbsp;
+              <input type="reset" value="Reset" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
